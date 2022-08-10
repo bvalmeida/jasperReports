@@ -90,8 +90,10 @@ from funcionarios f, empresas e]]>
 			</textField>
 			<textField>
 				<reportElement x="143" y="0" width="143" height="30" uuid="750feaa4-9114-4888-b56c-e69bfe048648"/>
-				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CNPJ: " + $F{cnpj}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="286" y="0" width="143" height="30" uuid="3381c270-c7c0-4685-9e1d-50cf644871b8"/>
@@ -180,7 +182,7 @@ from funcionarios f, empresas e]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField pattern="dd/MM/yyyy">
 				<reportElement style="estilo_cores_alternadas" x="285" y="0" width="143" height="30" uuid="eea5386f-f8c7-484e-b9d2-7b84d601d8f1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="552034f8-22e6-4778-8bee-365b05d2fef8"/>
 				</reportElement>
